@@ -1,7 +1,7 @@
 # Chief of State
 
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chief-of-state/chief-of-state/Master/master?style=flat-square)](https://github.com/chief-of-state/chief-of-state/actions?query=workflow%3ABuild)
-[![Codecov](https://img.shields.io/codecov/c/github/chief-of-state/chief-of-state?color=red&style=flat-square)](https://codecov.io/gh/namely/chief-of-state)
+[![Codecov](https://img.shields.io/codecov/c/github/chief-of-state/chief-of-state?color=red&style=flat-square)](https://codecov.io/gh/chief-of-state/chief-of-state)
 
 
 ## Overview
