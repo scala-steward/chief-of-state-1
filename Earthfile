@@ -69,7 +69,7 @@ build-image:
     FROM +prepare-image
     # build the image and push remotely (if all steps are successful)
     ARG VERSION=dev
-    SAVE IMAGE --push namely/chief-of-state:${VERSION}
+    SAVE IMAGE --push ghcr.io/chief-of-state/chief-of-state:${VERSION}
 
 test-local:
     FROM +code
@@ -82,7 +82,7 @@ test-local:
     END
 
     # push to earthly cache
-    SAVE IMAGE --push namely/chief-of-state:earthly-cache
+    SAVE IMAGE --push ghcr.io/chief-of-state/chief-of-state:earthly-cache
 
 codecov:
     FROM +test-local
