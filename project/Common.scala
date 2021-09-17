@@ -52,9 +52,9 @@ object Common extends AutoPlugin {
       // show full stack traces and test case durations
       Test / testOptions += Tests.Argument("-oDF"),
       Test / logBuffered := false,
-      coverageExcludedPackages := "<empty>;com.namely.protobuf.*;" +
-      "com.namely.chiefofstate.StartNodeBehaviour;" +
-      "com.namely.chiefofstate.ServiceBootstrapper;" +
-      "com.namely.chiefofstate.StartNode;",
+      coverageExcludedPackages := "<empty>;com.github.chiefofstate.protobuf.*;" +
+      "com.github.chiefofstate.StartNodeBehaviour;" +
+      "com.github.chiefofstate.ServiceBootstrapper;" +
+      "com.github.chiefofstate.StartNode;",
       Test / fork := true)
 }
