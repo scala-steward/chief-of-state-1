@@ -10,13 +10,13 @@ as [protobufs](https://developers.google.com/protocol-buffers) in `.proto` files
 your application language to interact with chief-of-state and also to implement the requried write-handler and
 read-handler methods (more on those later).
 
-The protos are located in a github repo: https://github.com/namely/chief-of-state-protos
+The protos are located in a github repo: [https://github.com/chief-of-state/protos](https://github.com/chief-of-state/protos)
 
 A popular way of incorporating them into your project is via git submodules, which you can add like so:
 
 ```sh
 # adds COS protos to proto/cos
-git submodule add git@github.com:namely/chief-of-state-protos ./protos/cos
+git submodule add git@github.com:chief-of-state/protos.git ./protos/cos
 ```
 
 From there, you can generate the COS interfaces for your language (see the official quick start guide for your
@@ -41,7 +41,7 @@ open-source docker-based solution
 ## Implement a "Write Side"
 
 Drawing from CQRS terminology, COS defines
-a [writeside interface](https://github.com/namely/chief-of-state-protos/blob/master/chief_of_state/v1/writeside.proto)
+a [writeside interface](https://github.com/chief-of-state/protos/blob/master/chief_of_state/v1/writeside.proto)
 that you must implement to define how state is created and updated.
 
 ### Methods
@@ -71,7 +71,7 @@ COS_WRITE_SIDE_PORT: 50051
 
 Once you have implemented a write handler and registered it with COS, you are able to start sending requests to
 chief-of-state with the
-chief-of-state [gRPC client methods](https://github.com/namely/chief-of-state-protos/blob/master/chief_of_state/v1/service.proto)
+chief-of-state [gRPC client methods](https://github.com/chief-of-state/protos/blob/master/chief_of_state/v1/service.proto)
 .
 
 `ProcessCommand` accepts a command (request) and an entity ID, and processes that command by forwarding it to your write
@@ -83,7 +83,7 @@ entities can be processed in parallel.
 ## Implement a "Read Side"
 
 COS defines
-a [readside interface](https://github.com/namely/chief-of-state-protos/blob/master/chief_of_state/v1/readside.proto) and
+a [readside interface](https://github.com/chief-of-state/protos/blob/master/chief_of_state/v1/readside.proto) and
 allows you to implement many "readsides" (from CQRS "read side") to stream your events and state to external
 destinations. For example, you might implement a readside that writes to your applications private elasticsearch cluster
 for serving fancy search queries, and you could implement a second readside that publishes your event to kafka for

@@ -52,7 +52,7 @@ After setting the above environment variables, just boot the new version of COS.
 
 COS v0.8 moves to [OpenTelemetry](https://opentelemetry.io/) for metrics and tracing and can now emit metrics to
 the [OLTP collector](https://github.com/open-telemetry/opentelemetry-collector/blob/main/exporter/README.md). Please see
-our [docs](https://github.com/namely/chief-of-state/blob/master/docs/configuration.md#telemetry-configuration) for
+our [docs](https://github.com/chief-of-state/protos/blob/master/docs/configuration.md#telemetry-configuration) for
 configuring an OTLP collector.
 
 ### After the migration
