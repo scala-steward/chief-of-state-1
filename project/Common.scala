@@ -1,5 +1,3 @@
-import sbt._
-import sbt.Keys.{ resolvers, _ }
 import Dependencies.Versions
 import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport.{
   headerLicense,
@@ -8,12 +6,9 @@ import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport.{
   HeaderLicenseStyle
 }
 import org.scalafmt.sbt.ScalafmtPlugin.autoImport.scalafmtOnCompile
-import scoverage.ScoverageKeys.{
-  coverageExcludedPackages,
-  coverageFailOnMinimum,
-  coverageMinimum,
-  coverageMinimumStmtTotal
-}
+import sbt.Keys._
+import sbt._
+import scoverage.ScoverageKeys.{ coverageExcludedPackages, coverageFailOnMinimum, coverageMinimumStmtTotal }
 
 object Common extends AutoPlugin {
 

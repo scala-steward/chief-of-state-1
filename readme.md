@@ -3,12 +3,11 @@
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/chief-of-state/chief-of-state/Master/master?style=flat-square)](https://github.com/chief-of-state/chief-of-state/actions?query=workflow%3ABuild)
 [![Codecov](https://img.shields.io/codecov/c/github/chief-of-state/chief-of-state?color=red&style=flat-square)](https://codecov.io/gh/chief-of-state/chief-of-state)
 
-
 ## Overview
 
-Chief-of-state (COS) is an Open Source clustered persistence tool for building event sourced applications. COS supports CQRS and
-event-sourcing through simple, language-agnostic interfaces via gRPC, and it allows developers to describe their schema
-with Protobuf. Under the hood, COS leverages [Akka](https://akka.io/)
+Chief-of-state (COS) is an Open Source clustered persistence tool for building event sourced applications. COS supports
+CQRS and event-sourcing through simple, language-agnostic interfaces via gRPC, and it allows developers to describe
+their schema with Protobuf. Under the hood, COS leverages [Akka](https://akka.io/)
 to scale out and guarantee performant, reliable persistence.
 
 Chief-of-state was built with the following principles:
@@ -88,8 +87,8 @@ You can join these groups and chat to discuss and ask Chief Of State related que
 
 Contributions are welcome!
 
-If you see an issue that you'd like to see fixed, the best way to make it happen is to help out by submitting a pull request implementing it. To test your implementation locally follow the steps below:
-
+If you see an issue that you'd like to see fixed, the best way to make it happen is to help out by submitting a pull
+request implementing it. To test your implementation locally follow the steps below:
 
 ### Locally build / test
 
