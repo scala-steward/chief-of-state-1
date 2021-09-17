@@ -27,11 +27,11 @@ class CosSerializerSpec extends BaseActorSpec(s"""
       actor {
         serialize-messages = on
         serializers {
-          cosSerializer = "com.namely.chiefofstate.serialization.CosSerializer"
+          cosSerializer = "com.github.chiefofstate.serialization.CosSerializer"
         }
         serialization-bindings {
           "scalapb.GeneratedMessage" = cosSerializer
-          "com.namely.chiefofstate.serialization.ScalaMessage" = cosSerializer
+          "com.github.chiefofstate.serialization.ScalaMessage" = cosSerializer
         }
       }
     }
