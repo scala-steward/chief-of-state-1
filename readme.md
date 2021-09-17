@@ -11,7 +11,7 @@ event-sourcing through simple, language-agnostic interfaces via gRPC, and it all
 with Protobuf. Under the hood, COS leverages [Akka](https://akka.io/)
 to scale out and guarantee performant, reliable persistence.
 
-Chief-of-state was built by Namely with the following principles:
+Chief-of-state was built with the following principles:
 
 * Wire format should be the same as persistence
 * Scaling should not require re-architecture

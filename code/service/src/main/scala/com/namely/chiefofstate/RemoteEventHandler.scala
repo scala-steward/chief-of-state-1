@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Namely Inc.
+ * Copyright 2020 chiefofstate
  *
  * SPDX-License-Identifier: MIT
  */

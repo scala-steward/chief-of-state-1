@@ -8,7 +8,12 @@ import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport.{
   HeaderLicenseStyle
 }
 import org.scalafmt.sbt.ScalafmtPlugin.autoImport.scalafmtOnCompile
-import scoverage.ScoverageKeys.{ coverageExcludedPackages, coverageFailOnMinimum, coverageMinimum }
+import scoverage.ScoverageKeys.{
+  coverageExcludedPackages,
+  coverageFailOnMinimum,
+  coverageMinimum,
+  coverageMinimumStmtTotal
+}
 
 object Common extends AutoPlugin {
 
@@ -19,20 +24,17 @@ object Common extends AutoPlugin {
   override def globalSettings =
     Seq(
       scalaVersion := Versions.ScalaVersion,
-      organization := "com.namely",
-      organizationName := "Namely Inc.",
-      organizationHomepage := Some(url("https://www.namely.com/")),
       startYear := Some(2020),
       licenses += ("MIT", new URL("https://opensource.org/licenses/MIT")),
       headerLicenseStyle := HeaderLicenseStyle.SpdxSyntax,
-      headerLicense := Some(HeaderLicense.Custom("""|Copyright (c) 2020 Namely Inc.
+      headerLicense := Some(HeaderLicense.Custom("""|Copyright (c) 2021 Chief-Of-State.
              |
              |""".stripMargin)),
       developers += Developer(
         "contributors",
         "Contributors",
         "",
-        url("https://github.com/namely/chief-of-state/graphs/contributors")))
+        url("https://github.com/chief-of-state/chief-of-state/graphs/contributors")))
 
   override def projectSettings =
     Seq(
@@ -50,7 +52,7 @@ object Common extends AutoPlugin {
         ("com.github.ghik" % "silencer-lib" % Versions.SilencerVersion % Provided).cross(CrossVersion.full)),
       scalafmtOnCompile := true,
       // require test coverage
-      coverageMinimum := 85,
+      coverageMinimumStmtTotal := 85,
       coverageFailOnMinimum := true,
       // show full stack traces and test case durations
       Test / testOptions += Tests.Argument("-oDF"),

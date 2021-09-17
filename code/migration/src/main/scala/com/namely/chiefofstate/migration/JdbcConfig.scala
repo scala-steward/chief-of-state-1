@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Namely Inc.
+ * Copyright 2020 migration
  *
  * SPDX-License-Identifier: MIT
  */
