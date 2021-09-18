@@ -7,7 +7,6 @@
 package com.github.chiefofstate.migration
 
 import com.dimafeng.testcontainers.{ ForAllTestContainer, PostgreSQLContainer }
-import com.github.chiefofstate.migration.DbUtil
 import com.github.chiefofstate.migration.helper.TestConfig
 import org.testcontainers.utility.DockerImageName
 

@@ -17,12 +17,12 @@ import com.github.chiefofstate.protobuf.v1.persistence.EventWrapper
 import com.typesafe.config.{ Config, ConfigFactory, ConfigValueFactory }
 import org.testcontainers.utility.DockerImageName
 import slick.basic.DatabaseConfig
-import slick.jdbc.PostgresProfile.api._
 import slick.jdbc.{ JdbcBackend, JdbcProfile }
+import slick.jdbc.PostgresProfile.api._
 
 import java.sql.{ Connection, DriverManager }
-import scala.concurrent.duration.Duration
 import scala.concurrent.{ Await, ExecutionContextExecutor, Future }
+import scala.concurrent.duration.Duration
 
 class MigrateJournalSpec extends BaseSpec with ForAllTestContainer {
 

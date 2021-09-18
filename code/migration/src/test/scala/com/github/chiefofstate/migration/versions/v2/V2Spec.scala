@@ -20,11 +20,11 @@ import com.github.chiefofstate.migration.helper.DbHelper._
 import com.typesafe.config.{ Config, ConfigFactory, ConfigValueFactory }
 import org.testcontainers.utility.DockerImageName
 import slick.basic.DatabaseConfig
-import slick.jdbc.PostgresProfile.api._
 import slick.jdbc.{ JdbcBackend, JdbcProfile }
+import slick.jdbc.PostgresProfile.api._
 
-import scala.concurrent.duration.Duration
 import scala.concurrent.{ Await, ExecutionContext, ExecutionContextExecutor, Future }
+import scala.concurrent.duration.Duration
 
 class V2Spec extends BaseSpec with ForAllTestContainer {
 

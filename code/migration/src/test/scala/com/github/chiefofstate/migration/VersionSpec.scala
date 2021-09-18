@@ -6,7 +6,6 @@
 
 package com.github.chiefofstate.migration
 
-import com.github.chiefofstate.migration.Version
 import slick.dbio.{ DBIO, DBIOAction }
 
 class VersionSpec extends BaseSpec {

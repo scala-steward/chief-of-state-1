@@ -6,20 +6,20 @@
 
 package com.github.chiefofstate
 
-import akka.actor.typed.scaladsl.{ ActorContext, Behaviors }
 import akka.actor.typed.{ ActorRef, Behavior, SupervisorStrategy }
+import akka.actor.typed.scaladsl.{ ActorContext, Behaviors }
 import akka.cluster.sharding.typed.scaladsl.EntityTypeKey
 import akka.persistence.typed.PersistenceId
 import akka.persistence.typed.scaladsl._
 import com.github.chiefofstate.protobuf.v1.common.MetaData
 import com.github.chiefofstate.protobuf.v1.internal.{ CommandReply, GetStateCommand, RemoteCommand, SendCommand }
 import com.github.chiefofstate.protobuf.v1.persistence.{ EventWrapper, StateWrapper }
-import com.google.protobuf.any
-import com.google.protobuf.empty.Empty
-import Util.{ makeFailedStatusPf, toRpcStatus, Instants }
-import WriteHandlerHelpers.{ NewState, NoOp }
+import com.github.chiefofstate.Util.{ makeFailedStatusPf, toRpcStatus, Instants }
+import com.github.chiefofstate.WriteHandlerHelpers.{ NewState, NoOp }
 import com.github.chiefofstate.config.{ CosConfig, SnapshotConfig }
 import com.github.chiefofstate.serialization.MessageWithActorRef
+import com.google.protobuf.any
+import com.google.protobuf.empty.Empty
 import io.grpc.{ Status, StatusException }
 import io.opentelemetry.api.GlobalOpenTelemetry
 import io.opentelemetry.api.trace.{ Span, StatusCode }

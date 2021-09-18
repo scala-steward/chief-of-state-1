@@ -9,11 +9,11 @@ package com.github.chiefofstate.migration.versions.v5
 import akka.actor.testkit.typed.scaladsl.ActorTestKit
 import com.dimafeng.testcontainers.{ ForAllTestContainer, PostgreSQLContainer }
 import com.github.chiefofstate.migration.{ BaseSpec, DbUtil, SchemasUtil }
+import com.github.chiefofstate.migration.helper.{ DbHelper, TestConfig }
 import com.github.chiefofstate.protobuf.plugins.persistedheaders.v1.headers.{ Header, Headers }
 import com.github.chiefofstate.protobuf.v1.common.MetaData
 import com.github.chiefofstate.protobuf.v1.persistence.{ EventWrapper, StateWrapper }
 import com.google.protobuf.any
-import com.github.chiefofstate.migration.helper.{ DbHelper, TestConfig }
 import com.typesafe.config.{ Config, ConfigFactory, ConfigValueFactory }
 import org.testcontainers.utility.DockerImageName
 import slick.basic.DatabaseConfig

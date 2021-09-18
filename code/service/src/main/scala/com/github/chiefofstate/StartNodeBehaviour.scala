@@ -6,8 +6,6 @@
 
 package com.github.chiefofstate
 
-import com.typesafe.config.Config
-import org.slf4j.{ Logger, LoggerFactory }
 import akka.actor.typed._
 import akka.actor.typed.scaladsl.Behaviors
 import akka.cluster.typed.{ Cluster, ClusterSingleton, SingletonActor }
@@ -16,6 +14,8 @@ import akka.management.scaladsl.AkkaManagement
 import akka.NotUsed
 import com.github.chiefofstate.protobuf.v1.internal.DoMigration
 import com.github.chiefofstate.serialization.{ MessageWithActorRef, ScalaMessage }
+import com.typesafe.config.Config
+import org.slf4j.{ Logger, LoggerFactory }
 
 object StartNodeBehaviour {
   final val log: Logger = LoggerFactory.getLogger(getClass)

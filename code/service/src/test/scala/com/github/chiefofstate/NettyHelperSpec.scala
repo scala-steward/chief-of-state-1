@@ -6,7 +6,6 @@
 
 package com.github.chiefofstate
 
-import com.github.chiefofstate.NettyHelper
 import com.github.chiefofstate.helper.BaseSpec
 
 class NettyHelperSpec extends BaseSpec {

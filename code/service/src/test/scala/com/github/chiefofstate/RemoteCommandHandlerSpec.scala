@@ -7,24 +7,23 @@
 package com.github.chiefofstate
 
 import com.github.chiefofstate
+import com.github.chiefofstate.config.{ GrpcClient, GrpcConfig, GrpcServer }
+import com.github.chiefofstate.helper.BaseSpec
 import com.github.chiefofstate.protobuf.v1.common.Header
 import com.github.chiefofstate.protobuf.v1.common.Header.Value
 import com.github.chiefofstate.protobuf.v1.internal.RemoteCommand
 import com.github.chiefofstate.protobuf.v1.persistence.StateWrapper
 import com.github.chiefofstate.protobuf.v1.tests.{ Account, AccountOpened, OpenAccount }
-import com.github.chiefofstate.protobuf.v1.writeside.WriteSideHandlerServiceGrpc.WriteSideHandlerServiceBlockingStub
 import com.github.chiefofstate.protobuf.v1.writeside.{
   HandleCommandRequest,
   HandleCommandResponse,
   WriteSideHandlerServiceGrpc
 }
+import com.github.chiefofstate.protobuf.v1.writeside.WriteSideHandlerServiceGrpc.WriteSideHandlerServiceBlockingStub
 import com.google.protobuf.ByteString
 import com.google.protobuf.any.Any
-import com.github.chiefofstate.config.{ GrpcClient, GrpcConfig, GrpcServer }
-import com.github.chiefofstate.RemoteCommandHandler
-import com.github.chiefofstate.helper.BaseSpec
-import io.grpc.inprocess._
 import io.grpc.{ ManagedChannel, ServerServiceDefinition, Status }
+import io.grpc.inprocess._
 
 import scala.concurrent.ExecutionContext.global
 import scala.util.Try

@@ -6,6 +6,7 @@
 
 package com.github.chiefofstate.migration.versions.v1
 
+import com.github.chiefofstate.migration.{ DbUtil, StringImprovements, Version }
 import com.github.chiefofstate.migration.versions.v1.V1.{
   createTable,
   insertInto,
@@ -13,7 +14,6 @@ import com.github.chiefofstate.migration.versions.v1.V1.{
   tempTable,
   OffsetRow
 }
-import com.github.chiefofstate.migration.{ DbUtil, StringImprovements, Version }
 import org.slf4j.{ Logger, LoggerFactory }
 import slick.basic.DatabaseConfig
 import slick.dbio.DBIO

@@ -9,14 +9,13 @@ package com.github.chiefofstate
 import com.github.chiefofstate.protobuf.v1.common.Header
 import com.github.chiefofstate.protobuf.v1.common.Header.Value.{ BytesValue, StringValue }
 import com.github.chiefofstate.protobuf.v1.tests.AccountOpened
+import com.github.chiefofstate.Util.{ Instants, Timestamps }
+import com.github.chiefofstate.helper.BaseSpec
 import com.google.protobuf.ByteString
 import com.google.protobuf.timestamp.Timestamp
 import com.google.rpc.error_details.BadRequest
-import com.github.chiefofstate.Util.{ Instants, Timestamps }
-import com.github.chiefofstate.Util
-import com.github.chiefofstate.helper.BaseSpec
-import io.grpc.protobuf.StatusProto
 import io.grpc.{ Metadata, Status, StatusException, StatusRuntimeException }
+import io.grpc.protobuf.StatusProto
 
 import java.time.{ Instant, ZoneId }
 import scala.util.Failure

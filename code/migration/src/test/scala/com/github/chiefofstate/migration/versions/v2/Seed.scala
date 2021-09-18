@@ -6,9 +6,9 @@
 
 package com.github.chiefofstate.migration.versions.v2
 
+import akka.persistence.{ PersistentRepr, SnapshotMetadata }
 import akka.persistence.jdbc.journal.dao.legacy
 import akka.persistence.jdbc.snapshot.dao.legacy.ByteArraySnapshotDao
-import akka.persistence.{ PersistentRepr, SnapshotMetadata }
 import akka.serialization.Serialization
 import com.github.chiefofstate.protobuf.v1.persistence.EventWrapper
 import com.github.chiefofstate.protobuf.v1.tests.{ Account, AccountOpened }
@@ -18,8 +18,8 @@ import slick.jdbc.PostgresProfile.api._
 
 import java.time.Instant
 import java.util.UUID
-import scala.concurrent.duration.Duration
 import scala.concurrent.{ Await, ExecutionContext, Future }
+import scala.concurrent.duration.Duration
 
 object Seed {
   private def journalRows(serialization: Serialization, numRows: Int): Seq[legacy.JournalRow] = {

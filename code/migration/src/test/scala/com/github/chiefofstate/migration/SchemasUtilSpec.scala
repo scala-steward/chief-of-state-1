@@ -8,7 +8,6 @@ package com.github.chiefofstate.migration
 
 import akka.actor.testkit.typed.scaladsl.ActorTestKit
 import com.dimafeng.testcontainers.{ ForAllTestContainer, PostgreSQLContainer }
-import com.github.chiefofstate.migration.{ DbUtil, SchemasUtil }
 import com.github.chiefofstate.migration.helper.TestConfig
 import org.testcontainers.utility.DockerImageName
 import slick.basic.DatabaseConfig

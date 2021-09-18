@@ -9,9 +9,8 @@ import com.github.chiefofstate.config.GrpcConfig
 import com.github.chiefofstate.protobuf.v1.common.MetaData
 import com.github.chiefofstate.protobuf.v1.writeside.{ HandleEventRequest, HandleEventResponse }
 import com.github.chiefofstate.protobuf.v1.writeside.WriteSideHandlerServiceGrpc.WriteSideHandlerServiceBlockingStub
-import org.slf4j.{ Logger, LoggerFactory }
 import com.google.protobuf.any
-import com.google.protobuf.empty.Empty
+import org.slf4j.{ Logger, LoggerFactory }
 
 import java.util.concurrent.TimeUnit
 import scala.util.Try

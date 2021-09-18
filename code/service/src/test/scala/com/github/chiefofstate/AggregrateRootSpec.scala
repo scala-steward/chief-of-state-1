@@ -9,24 +9,23 @@ package com.github.chiefofstate
 import akka.actor.testkit.typed.scaladsl.TestProbe
 import akka.actor.typed.{ ActorRef, ActorSystem }
 import akka.persistence.typed.PersistenceId
+import com.github.chiefofstate
+import com.github.chiefofstate.config.CosConfig
+import com.github.chiefofstate.helper.BaseActorSpec
 import com.github.chiefofstate.protobuf.v1.common.{ Header, MetaData }
-import com.github.chiefofstate.protobuf.v1.internal.CommandReply.Reply
 import com.github.chiefofstate.protobuf.v1.internal._
+import com.github.chiefofstate.protobuf.v1.internal.CommandReply.Reply
 import com.github.chiefofstate.protobuf.v1.persistence.StateWrapper
 import com.github.chiefofstate.protobuf.v1.tests.{ Account, AccountOpened, OpenAccount }
-import com.github.chiefofstate.protobuf.v1.writeside.WriteSideHandlerServiceGrpc.WriteSideHandlerServiceBlockingStub
 import com.github.chiefofstate.protobuf.v1.writeside._
+import com.github.chiefofstate.protobuf.v1.writeside.WriteSideHandlerServiceGrpc.WriteSideHandlerServiceBlockingStub
+import com.github.chiefofstate.serialization.MessageWithActorRef
 import com.google.protobuf.any
 import com.google.protobuf.any.Any
 import com.google.protobuf.empty.Empty
-import com.github.chiefofstate.config.CosConfig
-import com.github.chiefofstate.helper.BaseActorSpec
-import com.github.chiefofstate.serialization.MessageWithActorRef
-import com.github.chiefofstate.{ AggregateRoot, ProtosValidator, RemoteCommandHandler, RemoteEventHandler, Util }
-import com.github.chiefofstate
 import com.typesafe.config.{ Config, ConfigFactory }
-import io.grpc.inprocess._
 import io.grpc.{ ManagedChannel, ServerServiceDefinition, Status }
+import io.grpc.inprocess._
 import scalapb.GeneratedMessage
 
 import java.util.UUID

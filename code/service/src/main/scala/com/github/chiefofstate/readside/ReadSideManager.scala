@@ -7,8 +7,8 @@
 package com.github.chiefofstate.readside
 
 import akka.actor.typed.ActorSystem
-import com.github.chiefofstate.protobuf.v1.readside.ReadSideHandlerServiceGrpc.ReadSideHandlerServiceBlockingStub
 import com.github.chiefofstate.config.{ ReadSideConfig, ReadSideConfigReader }
+import com.github.chiefofstate.protobuf.v1.readside.ReadSideHandlerServiceGrpc.ReadSideHandlerServiceBlockingStub
 import com.github.chiefofstate.NettyHelper
 import com.typesafe.config.Config
 import com.zaxxer.hikari.{ HikariConfig, HikariDataSource }
